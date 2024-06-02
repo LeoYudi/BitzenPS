@@ -1,0 +1,30 @@
+@import '../../global.scss';
+
+.signup-page {
+  height: 100vh;
+  align-items: center;
+
+  .back-button {
+    color: $primary_cyan;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+
+  .title {
+    margin-bottom: 10px;
+  }
+
+  .has-account {
+    margin-bottom: 20px;
+  }
+
+  .submit-button {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 500;
+  }
+}
