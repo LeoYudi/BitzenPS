@@ -3,9 +3,8 @@ import { Link } from 'react-router-dom';
 
 import useViewModel from './viewModel';
 
-import Logo from 'assets/logo.svg?react'
-
 import './styles.scss';
+import { Logo } from 'components/Logo';
 
 function Login() {
   const {
@@ -18,13 +17,7 @@ function Login() {
     <Row className='login-page'>
       <Col span={12} offset={6}>
         <Card bordered={false} className='login-card'>
-          <div className='logo-container'>
-            <div className='logo'>
-              <Logo />
-            </div>
-
-            <Typography.Title level={2} className='logo-title'>Bitzen Pet</Typography.Title>
-          </div>
+          <Logo />
 
           <Typography.Title level={2} className='title'>Entrar na plataforma</Typography.Title>
 

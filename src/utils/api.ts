@@ -9,7 +9,7 @@ const api = axios.create({ baseURL: api_url });
 
 api.interceptors.request.use((config) => {
   if (!config.headers.Authorization)
-    config.headers.Authorization = `Bearear ${auth.token}`;
+    config.headers.Authorization = `Bearer ${auth.token}`;
 
   return config;
 })

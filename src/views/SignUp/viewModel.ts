@@ -1,5 +1,6 @@
 import { message } from 'antd';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import { signup, SignupPayloadType } from 'services/auth/signup';
 import { CustomError } from 'utils/CustomError';
@@ -10,6 +11,7 @@ export default function useViewModel() {
   const [loading, setLoading] = useState(false);
 
   const [messageApi, messageContext] = message.useMessage();
+  const navigate = useNavigate();
 
   const errorMessage = () => {
     messageApi.open({
@@ -45,6 +47,7 @@ export default function useViewModel() {
     }
     else {
       setAuthOnStorage({ token: response.data.token, user: response.data.user })
+      navigate('/home')
     }
     setLoading(false);
   }

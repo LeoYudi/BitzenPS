@@ -1,5 +1,6 @@
 import { message } from 'antd';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import { LoginPayloadType, login } from 'services/auth/login';
 
@@ -10,6 +11,7 @@ export default function useViewModel() {
   const [loading, setLoading] = useState(false);
 
   const [messageApi, messageContext] = message.useMessage();
+  const navigate = useNavigate();
 
   const errorMessage = () => {
     messageApi.open({
@@ -43,7 +45,8 @@ export default function useViewModel() {
       onError(response.error);
     }
     else {
-      setAuthOnStorage({ token: response.data.token, user: response.data.user })
+      setAuthOnStorage({ token: response.data.token, user: response.data.user });
+      navigate('/home')
     }
     setLoading(false);
   }

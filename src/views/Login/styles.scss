@@ -8,32 +8,6 @@
   .login-card {
     padding: 60px;
 
-    .logo-container {
-      margin-bottom: 50px;
-
-      display: flex;
-      align-items: center;
-      gap: 16px;
-
-      .logo {
-        width: 52px;
-        height: 52px;
-        background-color: $primary_cyan;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        border-radius: 100%;
-      }
-
-      .logo-title {
-        font-weight: 500;
-        color: $primary_cyan;
-        margin: 0;
-      }
-    }
-
     .title {
       margin-bottom: 20px;
     }
