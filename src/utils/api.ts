@@ -9,7 +9,7 @@ const api = axios.create({ baseURL: api_url });
 
 api.interceptors.request.use((config) => {
   if (!config.headers.Authorization)
-    config.headers.Authorization = auth.token;
+    config.headers.Authorization = `Bearear ${auth.token}`;
 
   return config;
 })
@@ -22,7 +22,7 @@ api.interceptors.response.use(response => response, (error: AxiosError): CustomE
     throw new CustomError('Requisição cancelada', 'ERR_CANCELED');
 
   if (error.response) {
-    throw new CustomError('', 'ERR_API', error.status, error.response.data);
+    throw new CustomError('', 'ERR_API', error.response.status, error.response.data);
   }
 
   throw new CustomError('Erro desconhecido', 'ERR_UNKNOWN');
