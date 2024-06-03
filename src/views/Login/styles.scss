@@ -1,0 +1,43 @@
+@import '../../global.scss';
+
+.login-page {
+  height: 100vh;
+  align-items: center;
+  background-color: #F4F4F4;
+
+  .login-card {
+    padding: 60px;
+
+    .logo-container {
+      margin-bottom: 50px;
+
+      .logo-title {
+        font-weight: 500;
+        color: $primary_cyan;
+      }
+    }
+
+    .title {
+      margin-bottom: 20px;
+    }
+
+    .signup-text {
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+
+    .forgot-password {
+      text-align: right;
+      font-weight: 600;
+    }
+
+    .submit-button {
+      width: 100%;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 500;
+    }
+  }
+}

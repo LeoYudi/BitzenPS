@@ -36,7 +36,6 @@ function SignUp() {
         <Form
           name='signup'
           layout='vertical'
-          autoComplete='off'
           onFinish={onSubmit}
           onFinishFailed={() => warningMessage('Parece que existem campos que precisam da sua atenção')}
         >
